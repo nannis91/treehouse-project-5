@@ -2,7 +2,7 @@
 baguetteBox.run('.gallery');
 
 /**
- * Live search in gallery with search field.
+ * Live search in gallery with search box.
  */
 
 // Collects all Data-Captions from images in the gallery and finds the search element

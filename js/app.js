@@ -3,10 +3,9 @@ baguetteBox.run('.gallery');
 
 /**
  * Live search in gallery with search field.
- * @const images Collects all Data-Captions from images in the gallery
- * @const searchInput  Finds the search element
  */
 
+// Collects all Data-Captions from images in the gallery and finds the search element
 const images = document.querySelectorAll('a[data-caption]');
 let searchInput = document.getElementById('search');
 

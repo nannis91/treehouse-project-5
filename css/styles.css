@@ -1,3 +1,5 @@
+--rotation-angle: 0deg;
+
 * {
   box-sizing: border-box;
 }
@@ -27,14 +29,14 @@ main {
 .search {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 20ch), 1fr));
   grid-auto-rows: auto;
-  gap: 30px;
+  gap: 50px;
 }
 
 .gallery img {
@@ -43,13 +45,18 @@ main {
   object-fit: cover;
   border: solid white;
   border-width: 5px 5px 30px 5px;
+  z-index: 0;
+  position: relative;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+  transform: rotate(var(--rotation-angle));
   transition: transform .3s ease-in-out,
-              box-shadow .3s ease-in-out;
+              box-shadow .3s ease-in-out,
+              z-index .3s ease-in-out;
 }
 
 .gallery img:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 5px 26px 16px rgba(0,0,0,0.1);
-
+transform: rotate(0deg) scale(1.4);
+box-shadow: 0px 5px 26px 16px rgba(0,0,0,0.1);
+z-index: 1;
+position: relative;
 }
